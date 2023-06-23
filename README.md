@@ -16,29 +16,12 @@ Here are the step-by-step instructions to set up Visual Studio Code for Go devel
    - Create a new folder where you want your Go project to live.
    - Open Visual Studio Code.
    - Go to `File > Open Folder...` and select the folder you just created.
+  
+   As of Go 1.16, module-aware mode is enabled by default, which means Go expects a `go.mod` file in the project directory or any parent directory.
 
-3. **Write the Go code**:
-   - Create a new file in your project folder (you can call it `main.go`).
-   - Copy and paste the Go code into `main.go`.
+   1. Open the Terminal in Visual Studio Code.
 
-4. **Configure the Go Environment**:
-   - Open the Terminal in Visual Studio Code (you can do this by going to `View > Terminal` or pressing `Ctrl+` backtick).
-   - In the Terminal, type `go env` to print Go's environment information.
-   - To change an environment variable, you can use the `go env -w` command. For example, to change the `GOPATH`, you would type `go env -w GOPATH=/my/new/gopath`. 
-   
-   
-   
-   
-   
-   
-   
-   The error message you're seeing indicates that your Go project isn't initialized as a Go module. As of Go 1.16, module-aware mode is enabled by default, which means Go expects a `go.mod` file in the project directory or any parent directory.
-
-Here's how you can initialize a Go module:
-
-1. Open the Terminal in Visual Studio Code.
-
-2. Navigate to the directory of your Go project. You can do this with the `cd` command. For example:
+   2. Navigate to the directory of your Go project. You can do this with the `cd` command. For example:
 
    ```bash
    cd /path/to/your/project
@@ -46,7 +29,7 @@ Here's how you can initialize a Go module:
 
    Replace `/path/to/your/project` with the path to your Go project directory.
 
-3. Once you're in your project directory, initialize a new Go module by typing:
+   3. Once you're in your project directory, initialize a new Go module by typing:
 
    ```bash
    go mod init <module_name>
@@ -72,18 +55,28 @@ Here's how you can initialize a Go module:
    go build -o ironctl
    ```
 
+4. **Write the Go code**:
+   - Create a new file in your project folder (you can call it `main.go`).
+   - Copy and paste the Go code into `main.go`.
+
+5. **Configure the Go Environment**:
+   - Open the Terminal in Visual Studio Code (you can do this by going to `View > Terminal` or pressing `Ctrl+` backtick).
+   - In the Terminal, type `go env` to print Go's environment information.
+   - To change an environment variable, you can use the `go env -w` command. For example, to change the `GOPATH`, you would type `go env -w GOPATH=/my/new/gopath`. 
+   
+   
    
 
 
-5. **Build the Go code**:
+6. **Build the Go code**:
    - Open the Terminal in Visual Studio Code (you can do this by going to `View > Terminal` or pressing `Ctrl+` backtick).
    - In the Terminal, navigate to the directory where your `main.go` file is located.
    - Type `go build` to compile the code. This will create an executable file in the same directory.
 
-6. **Run the Go code**:
+7. **Run the Go code**:
    - In the Terminal, you can run the code by typing `./<your-executable>`. Replace `<your-executable>` with the name of the executable file created in the previous step. On Windows, the file will have a `.exe` extension.
 
-7. **Debug the Go code**:
+8. **Debug the Go code**:
    - Set a breakpoint in your code by clicking in the left margin of the code editor.
    - Press `F5` to start debugging. Visual Studio Code will run your program until it hits the breakpoint.
 
