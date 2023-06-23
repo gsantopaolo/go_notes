@@ -1,4 +1,4 @@
-#Cofigure Go and VS Code
+# Cofigure Go and VS Code
 Before you get started, ensure that you have the following prerequisites:
 
 1. You have Go installed on your computer. As of my knowledge cutoff in September 2021, you can download Go from https://golang.org/dl/.
